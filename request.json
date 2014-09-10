@@ -1,0 +1,19 @@
+{
+  "request": {
+    "passengers": {
+      "adultCount": 1
+    },
+    "slice": [
+      {
+        "origin": "OAK",
+        "destination": "HNL",
+        "date": "2015-03-21"
+      },
+      {
+        "origin": "HNL",
+        "destination": "OAK",
+        "date": "2015-03-29"
+      }
+    ]
+  }
+}
