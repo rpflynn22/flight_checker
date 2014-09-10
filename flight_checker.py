@@ -22,7 +22,7 @@ def notify(price):
     server.sendmail('rpflynn22@gmail.com', '9252165538@txt.att.net', 'Price has dropped to $' + str(price))
     #server.sendmail('rpflynn22@gmail.com', '9258582952@txt.att.net', 'Price has dropped to $' + str(price))
     f = open('current_price.txt', 'w')
-    f.write(price)
+    f.write(str(price))
 
 
 ######### CHECK IF PRICE IS LOWER HERE ##########
