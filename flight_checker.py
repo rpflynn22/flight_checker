@@ -21,16 +21,13 @@ def notify(price):
     server.login('rpflynn22@gmail.com', 'mybirthdayis222')
     server.sendmail('rpflynn22@gmail.com', '9252165538@txt.att.net', 'Price has dropped to $' + str(price))
     #server.sendmail('rpflynn22@gmail.com', '9258582952@txt.att.net', 'Price has dropped to $' + str(price))
+    f = open('current_price.txt', 'w')
+    f.write(price)
 
 
 ######### CHECK IF PRICE IS LOWER HERE ##########
 
-try:
-    price = float(os.environ['PRICE_CHECKER'])
-    print('no keyerr')
-    if min_cost < price - 10:
-        notify(min_cost)
-except KeyError as e:
-	print('keyerror')
-	notify(min_cost)
-	os.environ['PRICE_CHECKER'] = str(min_cost)
+f = open('current_price.txt')
+price = float(f.read())
+if min_cost < price - 10:
+    notify(min_cost)
